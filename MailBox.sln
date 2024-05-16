@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailBox.BusinessLayer", "Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailBox.DataAccessLayer", "MailBox.DataAccessLayer\MailBox.DataAccessLayer.csproj", "{B0E00076-4793-41C4-9DA4-F4C7D09E62E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailBox.DtoLayer", "MailBox.DtoLayer\MailBox.DtoLayer.csproj", "{2145877A-A348-499B-83B0-4FAF9D07A43E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B0E00076-4793-41C4-9DA4-F4C7D09E62E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0E00076-4793-41C4-9DA4-F4C7D09E62E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0E00076-4793-41C4-9DA4-F4C7D09E62E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2145877A-A348-499B-83B0-4FAF9D07A43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2145877A-A348-499B-83B0-4FAF9D07A43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2145877A-A348-499B-83B0-4FAF9D07A43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2145877A-A348-499B-83B0-4FAF9D07A43E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

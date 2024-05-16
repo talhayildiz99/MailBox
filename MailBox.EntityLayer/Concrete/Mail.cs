@@ -19,5 +19,8 @@ namespace MailBox.EntityLayer.Concrete
         public bool IsSent { get; set; }
         public bool IsDeleted { get; set; }
         public bool IsSpam { get; set; }
+
+        public int AppUserId { get; set; } 
+        public AppUser AppUser { get; set; } 
     }
 }

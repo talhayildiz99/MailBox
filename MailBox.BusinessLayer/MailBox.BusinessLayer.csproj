@@ -13,6 +13,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MailBox.DataAccessLayer\MailBox.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\MailBox.DtoLayer\MailBox.DtoLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ValidationRules\AppRoleValidationRules\" />
+    <Folder Include="ValidationRules\MailValidationRules\" />
   </ItemGroup>
 
 </Project>
