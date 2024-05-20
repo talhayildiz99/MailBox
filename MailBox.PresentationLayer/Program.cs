@@ -1,7 +1,14 @@
+using MailBox.DataAccessLayer.Context;
+using MailBox.EntityLayer.Concrete;
+using MailBox.PresentationLayer.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<MailContext>();
+builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<MailContext>().AddErrorDescriber<MailIdentityValidator>();
+
 
 var app = builder.Build();
 
@@ -17,7 +24,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
