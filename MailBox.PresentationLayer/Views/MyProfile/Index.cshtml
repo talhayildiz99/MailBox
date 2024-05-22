@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -17,10 +16,11 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
+                    @RenderBody()
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
-                @await Component.InvokeAsync("_MemberLayoutFooterPartial")
+                    @await Component.InvokeAsync("_MemberLayoutFooterPartial")
                 <!-- partial -->
             </div>
             <!-- main-panel ends -->
