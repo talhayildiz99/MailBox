@@ -1,0 +1,47 @@
+﻿@model MailBox.DtoLayer.Dtos.AppUserDtos.AppUserEditDto
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kullanıcı Profili</h4>
+            <p class="card-description">Kullanıcı Profili Düzenleme Paneli</p>
+            <form method="post" class="forms-sample">
+                <div class="form-group">
+                    <label for="Name">Adınız</label>
+                    <input type="text" asp-for="Name" class="form-control" id="Name" placeholder="Ad">
+                </div>
+                <div class="form-group">
+                    <label for="Surname">Soyadınız</label>
+                    <input type="text" asp-for="Surname" class="form-control" id="Surname" placeholder="Soyad">
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email Adresiniz</label>
+                    <input type="email" asp-for="Email" class="form-control" id="Email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="City">Şehir</label>
+                    <input type="text" asp-for="City" class="form-control" id="City" placeholder="Şehir">
+                </div>
+                <div class="form-group">
+                    <label for="PhoneNumber">Telefon Numarası</label>
+                    <input type="text" asp-for="PhoneNumber" class="form-control" id="PhoneNumber" placeholder="Telefon Numarası">
+                </div>
+                <div class="form-group">
+                    <label for="Password">Şifre</label>
+                    <input type="password" asp-for="Password" class="form-control" id="Password" placeholder="Şifre">
+                </div>        
+                <div class="form-group">
+                    <label for="ConfirmPassword">Şifre Tekrarı</label>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" id="ConfirmPassword" placeholder="Şifre">
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
+

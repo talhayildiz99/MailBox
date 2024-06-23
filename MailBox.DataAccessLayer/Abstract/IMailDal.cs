@@ -9,5 +9,10 @@ namespace MailBox.DataAccessLayer.Abstract
 {
     public interface IMailDal : IGenericDal<Mail>
     {
+        List<Mail> GetSendandReceiverMailnameListAllbyReadId(int id);
+        List<Mail> GetSendandReceiverMailnameListAllbyStarredId(int id);
+        List<Mail> GetSendandReceiverMailnameListAllbyDraftSenderId(int id);
+        List<Mail> GetSendandReceiverMailnameListAllbyDeletedId(int id);
+        List<Mail> GetSendandReceiverMailnameListAllbySpamId(int id);
     }
 }

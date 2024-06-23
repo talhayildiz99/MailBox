@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4 grid-margin ">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mail Akışı</h4>
+                <canvas id="transaction-history" class="transaction-chart"></canvas>
+                <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                    <div class="text-md-center text-xl-left">
+                        <h6 class="mb-1">Toplam Mail Akışı</h6>
+                        <p class="text-muted mb-0">@ViewBag.TodayDate, @ViewBag.Time</p>
+                    </div>
+                    <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                        <h6 class="font-weight-bold mb-0">@ViewBag.Total</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h5>Okunmayan Mailler</h5>
+                <div class="row">
+                    <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                        <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">@ViewBag.IsRead</h2>
+                        </div>
+                        <h6 class="text-muted font-weight-normal">@ViewBag.TodayDate</h6>
+                    </div>
+                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                        <i class="icon-lg mdi mdi-comment-text text-primary ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h5>Yıldızlı Mesajlar</h5>
+                <div class="row">
+                    <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                        <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">@ViewBag.IsStarred</h2>
+                        </div>
+                        <h6 class="text-muted font-weight-normal">@ViewBag.TodayDate</h6>
+                    </div>
+                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                        <i class="icon-lg mdi mdi-star text-danger ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h5>Taslaklar</h5>
+                <div class="row">
+                    <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                        <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">@ViewBag.Draft</h2>
+                        </div>
+                        <h6 class="text-muted font-weight-normal">@ViewBag.TodayDate</h6>
+                    </div>
+                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                        <i class="icon-lg mdi mdi-reload text-success ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h5>Silinen Mailler</h5>
+                <div class="row">
+                    <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                        <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">@ViewBag.Delete</h2>
+                        </div>
+                        <h6 class="text-muted font-weight-normal">@ViewBag.TodayDate</h6>
+                    </div>
+                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                        <i class="icon-lg mdi mdi-delete text-primary ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h5>Spam Mesajlar</h5>
+                <div class="row">
+                    <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                        <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">@ViewBag.Spam</h2>
+                        </div>
+                        <h6 class="text-muted font-weight-normal">@ViewBag.TodayDate</h6>
+                    </div>
+                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                        <i class="icon-lg mdi mdi mdi-emoticon-poop text-danger ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<script src="~/CoronaTheme/template/assets/vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="~/CoronaTheme/template/assets/vendors/chart.js/Chart.min.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/progressbar.js/progressbar.min.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="~/CoronaTheme/template/assets/js/off-canvas.js"></script>
+<script src="~/CoronaTheme/template/assets/js/hoverable-collapse.js"></script>
+<script src="~/CoronaTheme/template/assets/js/misc.js"></script>
+<script src="~/CoronaTheme/template/assets/js/settings.js"></script>
+<script src="~/CoronaTheme/template/assets/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page -->
+<!-- End custom js for this page -->
+<script src="~/coronatheme/template/assets/js/dashboard.js"></script>

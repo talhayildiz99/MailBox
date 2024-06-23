@@ -63,9 +63,9 @@
     }
     if ($("#transaction-history").length) {
       var areaData = {
-        labels: ["Paypal", "Stripe","Cash"],
+          labels: ["Okundu", "Okunmadı", "Silindi"],
         datasets: [{
-            data: [55, 25, 20],
+            data: [60, 20, 20],
             backgroundColor: [
               "#111111","#00d25b","#ffab00"
             ]
@@ -102,7 +102,7 @@
           ctx.textBaseline = "middle";
           ctx.fillStyle = "#ffffff";
       
-          var text = "$1200", 
+          var text = "Mail Geçmişi", 
               textX = Math.round((width - ctx.measureText(text).width) / 2),
               textY = height / 2.4;
       
@@ -115,7 +115,7 @@
           ctx.textBaseline = "middle";
           ctx.fillStyle = "#6c7293";
 
-          var texts = "Total", 
+          var texts = "İstatistik", 
               textsX = Math.round((width - ctx.measureText(text).width) / 1.93),
               textsY = height / 1.7;
       
@@ -133,9 +133,9 @@
     }
     if ($("#transaction-history-arabic").length) {
       var areaData = {
-        labels: ["Paypal", "Stripe","Cash"],
+        labels: ["Okundu", "Okunmadı","Silindi"],
         datasets: [{
-            data: [55, 25, 20],
+            data: [60, 20, 20],
             backgroundColor: [
               "#111111","#00d25b","#ffab00"
             ]

@@ -2,7 +2,7 @@
 
 namespace MailBox.PresentationLayer.Controllers
 {
-    public class MyProfileController : Controller
+    public class LayoutController : Controller
     {
         public IActionResult Index()
         {

@@ -11,6 +11,12 @@ namespace MailBox.DataAccessLayer.Repositories
     public class GenericRepository<T> : IGenericDal<T> where T : class
     {
         MailContext context = new MailContext();
+
+        public GenericRepository(MailContext context)
+        {
+            this.context = context;
+        }
+
         public void Delete(int id)
         {
             var value = context.Set<T>().Find(id);

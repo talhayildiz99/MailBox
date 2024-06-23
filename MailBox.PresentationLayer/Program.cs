@@ -1,4 +1,8 @@
+using MailBox.BusinessLayer.Abstract;
+using MailBox.BusinessLayer.Concrete;
+using MailBox.DataAccessLayer.Abstract;
 using MailBox.DataAccessLayer.Context;
+using MailBox.DataAccessLayer.EntityFramework;
 using MailBox.EntityLayer.Concrete;
 using MailBox.PresentationLayer.Models;
 
@@ -8,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MailContext>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<MailContext>().AddErrorDescriber<MailIdentityValidator>();
+builder.Services.AddScoped<IMailService, MailManager>();
+builder.Services.AddScoped<IMailDal, EfMailDal>();
 
 
 var app = builder.Build();

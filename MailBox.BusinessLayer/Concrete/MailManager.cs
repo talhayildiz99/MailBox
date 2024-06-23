@@ -33,6 +33,31 @@ namespace MailBox.BusinessLayer.Concrete
             return _mailDal.GetListAll();
         }
 
+        public List<Mail> TGetSendandReceiverMailnameListAllbyDeletedId(int id)
+        {
+            return _mailDal.GetSendandReceiverMailnameListAllbyDeletedId(id);
+        }
+
+        public List<Mail> TGetSendandReceiverMailnameListAllbyDraftSenderId(int id)
+        {
+            return _mailDal.GetSendandReceiverMailnameListAllbyDraftSenderId(id);
+        }
+
+        public List<Mail> TGetSendandReceiverMailnameListAllbyReadId(int id)
+        {
+            return _mailDal.GetSendandReceiverMailnameListAllbyReadId(id);
+        }
+
+        public List<Mail> TGetSendandReceiverMailnameListAllbySpamId(int id)
+        {
+            return _mailDal.GetSendandReceiverMailnameListAllbySpamId(id);
+        }
+
+        public List<Mail> TGetSendandReceiverMailnameListAllbyStarredId(int id)
+        {
+            return _mailDal.GetSendandReceiverMailnameListAllbyStarredId(id);
+        }
+
         public void TInsert(Mail entity)
         {
             _mailDal.Insert(entity);
