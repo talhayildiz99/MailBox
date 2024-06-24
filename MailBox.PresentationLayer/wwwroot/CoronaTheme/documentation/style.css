@@ -68,6 +68,20 @@ h6 {
   margin-bottom: 20px;
 }
 
+.right-align {
+	display: inline-block;
+	float: right; /* Saða yaslama */
+	margin-left: auto; /* Sol tarafýndan otomatik boþluk */
+}
+
+.nav-items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center; /* Ýçerikleri dikey olarak ortalar */
+	width: 100%; /* Tüm geniþliði kaplamasý için */
+}
+
+
 .logo {
   width: 80%;
 }
@@ -122,6 +136,7 @@ h6 {
   margin-top: 1rem;
   margin-bottom: 1.6rem;
 }
+
 
 .documentation .left-sidebar .logo-wrapper img {
   height: 24px;

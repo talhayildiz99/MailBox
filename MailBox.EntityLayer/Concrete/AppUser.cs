@@ -14,7 +14,8 @@ namespace MailBox.EntityLayer.Concrete
         public string City { get; set; }
         public string ImageUrl { get; set; }
         public int ConfirmCode { get; set; }
-        public List<Mail> Mails { get; set; }
-       
+        public List<Mail> SenderMail { get; set; }
+        public List<Mail> ReceiverMail { get; set; }
+
     }
 }

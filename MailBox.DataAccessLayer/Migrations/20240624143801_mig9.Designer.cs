@@ -4,6 +4,7 @@ using MailBox.DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MailBox.DataAccessLayer.Migrations
 {
     [DbContext(typeof(MailContext))]
-    partial class MailContextModelSnapshot : ModelSnapshot
+    [Migration("20240624143801_mig9")]
+    partial class mig9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,6 +161,9 @@ namespace MailBox.DataAccessLayer.Migrations
                     b.Property<bool>("IsRead")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsSent")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsSpam")
                         .HasColumnType("bit");
 
@@ -188,6 +193,8 @@ namespace MailBox.DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("MailId");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("ReceiverId");
 
@@ -301,6 +308,12 @@ namespace MailBox.DataAccessLayer.Migrations
 
             modelBuilder.Entity("MailBox.EntityLayer.Concrete.Mail", b =>
                 {
+                    b.HasOne("MailBox.EntityLayer.Concrete.AppUser", "AppUser")
+                        .WithMany("Mails")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("MailBox.EntityLayer.Concrete.AppUser", "Receiver")
                         .WithMany("ReceiverMail")
                         .HasForeignKey("ReceiverId")
@@ -310,6 +323,8 @@ namespace MailBox.DataAccessLayer.Migrations
                         .WithMany("SenderMail")
                         .HasForeignKey("SenderId")
                         .IsRequired();
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("Receiver");
 
@@ -369,6 +384,8 @@ namespace MailBox.DataAccessLayer.Migrations
 
             modelBuilder.Entity("MailBox.EntityLayer.Concrete.AppUser", b =>
                 {
+                    b.Navigation("Mails");
+
                     b.Navigation("ReceiverMail");
 
                     b.Navigation("SenderMail");

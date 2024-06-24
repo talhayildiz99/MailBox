@@ -5,6 +5,7 @@ using MailBox.DataAccessLayer.Context;
 using MailBox.DataAccessLayer.EntityFramework;
 using MailBox.EntityLayer.Concrete;
 using MailBox.PresentationLayer.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,9 @@ builder.Services.AddDbContext<MailContext>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<MailContext>().AddErrorDescriber<MailIdentityValidator>();
 builder.Services.AddScoped<IMailService, MailManager>();
 builder.Services.AddScoped<IMailDal, EfMailDal>();
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 
 
 var app = builder.Build();
