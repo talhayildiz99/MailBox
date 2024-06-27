@@ -18,7 +18,7 @@ namespace MailBox.PresentationLayer.ViewComponents.Member
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            ViewBag.user = user.Name;
+            ViewBag.user = user.Name + " " + user.Surname;
             ViewBag.email = user.Email;
             ViewBag.ImageUrl = user.ImageUrl;
             var Inbox = _mailService.TGetSendandReceiverMailnameListAllbyReceiverId(user.Id).Count();

@@ -5,10 +5,10 @@ $(function() {
    */
   'use strict';
   var data = {
-    labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
+    labels: ["Gelen", "Gönderilen", "Taslak", "Yýldýzlý", "Çöp", "Spam"],
     datasets: [{
       label: '# of Votes',
-      data: [10, 19, 3, 5, 2, 3],
+      data: [12, 6, 1, 5, 2, 3],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -33,7 +33,7 @@ $(function() {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
     datasets: [{
         label: 'Dataset 1',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 6, 1, 5, 2, 3],
         borderColor: [
           '#587ce4'
         ],
@@ -110,7 +110,7 @@ $(function() {
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-      'Pink',
+      'Red',
       'Blue',
       'Yellow',
     ]
@@ -123,10 +123,10 @@ $(function() {
     }
   };
   var areaData = {
-    labels: ["2013", "2014", "2015", "2016", "2017"],
+      labels: ["Gelen", "Gönderilen", "Taslak", "Yýldýzlý", "Çöp", "Spam"],
     datasets: [{
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+        data: [12, 6, 1, 5, 2, 3],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',

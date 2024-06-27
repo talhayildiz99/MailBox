@@ -19,6 +19,8 @@ namespace MailBox.PresentationLayer.Controllers
         public async Task<IActionResult> Index()
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            ViewBag.user = user.Name + " " + user.Surname;
+            ViewBag.ImageUrl =user.ImageUrl;
             ViewBag.TodayDate = DateTime.Now.ToString("d MMMM yyyy");
             ViewBag.Time = DateTime.Now.ToString("HH:mm:ss");
             ViewBag.Total = _mailService.TGetListAll().Count();

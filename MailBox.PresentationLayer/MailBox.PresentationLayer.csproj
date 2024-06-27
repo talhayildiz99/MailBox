@@ -21,4 +21,6 @@
     <ProjectReference Include="..\MailBox.BusinessLayer\MailBox.BusinessLayer.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties wwwroot_4coronatheme_4template_4assets_4css_4maps_4style_1css_1map__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

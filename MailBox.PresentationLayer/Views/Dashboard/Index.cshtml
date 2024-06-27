@@ -4,12 +4,14 @@
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
+<script src="~/coronatheme/template/assets/js/chart.js"></script>
+
 <div class="row">
-    <div class="col-md-4 grid-margin ">
-        <div class="card">
-            <div class="card-body">
+    <div class="col-md-4 grid-margin">
+        <div class="card" style="height: 100%;">
+            <div class="card-body" style="display: flex; flex-direction: column;">
                 <h4 class="card-title">Mail Akışı</h4>
-                <canvas id="transaction-history" class="transaction-chart"></canvas>
+                <canvas id="transaction-history" class="transaction-chart" style="flex-grow: 1;"></canvas>
                 <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
                     <div class="text-md-center text-xl-left">
                         <h6 class="mb-1">Toplam Mail Akışı</h6>
@@ -22,7 +24,24 @@
             </div>
         </div>
     </div>
+    <div class="col-md-4 grid-margin">
+        <div class="card" style="height: 100%;">
+            <div class="card-body" style="display: flex; flex-direction: column;">
+                <h4 class="card-title">@ViewBag.User</h4>
+                <img src="@ViewBag.ImageUrl" alt="Image" style="flex-grow: 1; object-fit: cover; width: 100%; height: auto;" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 grid-margin">
+        <div class="card" style="height: 100%;">
+            <div class="card-body" style="display: flex; flex-direction: column;">
+                <h4 class="card-title">İstatistikler</h4>
+                <canvas id="barChart" style="flex-grow: 1; height: auto;"></canvas>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 <div class="row">
     <div class="col-sm-4 grid-margin">
@@ -136,3 +155,6 @@
 <!-- Custom js for this page -->
 <!-- End custom js for this page -->
 <script src="~/coronatheme/template/assets/js/dashboard.js"></script>
+
+<script src="~/coronatheme/template/assets/js/chart.js"></script>
+<script src="~/coronatheme/template/assets/js/chart.js"></script>
