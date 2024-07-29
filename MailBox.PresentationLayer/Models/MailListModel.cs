@@ -7,6 +7,7 @@ namespace MailBox.PresentationLayer.Models
         public int MailId { get; set; }
         public int? SenderId { get; set; } // Gönderici AppUser'ın Id'sini temsil eder
         public int? ReceiverId { get; set; } // Alıcı AppUser'ın Id'sini temsil eder
+        public string ReceiverEmail { get; set; } // Alıcı AppUser'ın Email'ini temsil eder
         public string MailSubject { get; set; }
         public string MailContent { get; set; }
         public DateTime MailDate { get; set; }

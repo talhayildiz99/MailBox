@@ -1,0 +1,78 @@
+﻿@model List<MailBox.PresentationLayer.Models.MailListModel>
+
+@{
+    ViewData["Title"] = "Draft";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-12 grid-margin">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h4 class="font-weight-bold mb-0">Taslaklar</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Taslak Mailler</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Konu</th>
+                                    <th>Tarih</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var mail in Model)
+                                {
+                                    <tr>
+                                        <td>@mail.MailSubject</td>
+                                        <td>@mail.MailDate.ToString("g")</td>
+                                        <td>
+                                            <a href="@Url.Action("Compose", "Mail", new { id = mail.MailId })" class="btn btn-info btn-sm">Düzenle</a>
+                                            <form asp-action="Delete" method="post" style="display:inline;">
+                                                <input type="hidden" name="id" value="@mail.MailId" />
+                                                <input type="hidden" name="redirectAction" value="Draft" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/CoronaTheme/template/assets/vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="~/CoronaTheme/template/assets/vendors/chart.js/Chart.min.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/progressbar.js/progressbar.min.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="~/CoronaTheme/template/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="~/CoronaTheme/template/assets/js/off-canvas.js"></script>
+<script src="~/CoronaTheme/template/assets/js/hoverable-collapse.js"></script>
+<script src="~/CoronaTheme/template/assets/js/misc.js"></script>
+<script src="~/CoronaTheme/template/assets/js/settings.js"></script>
+<script src="~/CoronaTheme/template/assets/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page -->
+<!-- End custom js for this page -->
+<script src="~/coronatheme/template/assets/js/dashboard.js"></script>
+
+<script src="~/coronatheme/template/assets/js/chart.js"></script>

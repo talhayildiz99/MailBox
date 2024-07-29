@@ -1,43 +1,16 @@
-﻿@using System.Text.RegularExpressions
-@model List<MailBox.PresentationLayer.Models.MailListModel>
+﻿@model List<MailBox.PresentationLayer.Models.MailListModel>
 
 @{
-    ViewData["Title"] = "Inbox";
+    ViewData["Title"] = "DeletedMails";
     Layout = "~/Views/Layout/Index.cshtml";
 }
-
-
-<style>
-    .unread-mail {
-        border-left: 5px solid #ffc107;
-        font-weight: bold;
-        background-color: #f8f9fa;
-    }
-
-    .mdi {
-        cursor: pointer;
-    }
-
-    .mdi-star {
-        color: gold;
-    }
-
-    .mdi-star-outline {
-        color: grey;
-    }
-</style>
 
 <div class="content-wrapper">
     <div class="row">
         <div class="col-md-12 grid-margin">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
-                    <h4 class="font-weight-bold mb-0">Gelen Kutusu</h4>
-                </div>
-                <div>
-                    <a href="@Url.Action("Compose", "Mail")" class="btn btn-primary btn-icon-text">
-                        <i class="mdi mdi-plus-circle"></i> Yeni Mail Oluştur
-                    </a>
+                    <h4 class="font-weight-bold mb-0">Silinen Mailler</h4>
                 </div>
             </div>
         </div>
@@ -47,12 +20,11 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Gelen Kutusu</h4>
+                    <h4 class="card-title">Silinen Mailler</h4>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Önemli</th>
                                     <th>Gönderen</th>
                                     <th>Konu</th>
                                     <th>Tarih</th>
@@ -64,22 +36,15 @@
                                 {
                                     @foreach (var mail in Model)
                                     {
-                                        <tr class="@(mail.IsRead ? "" : "unread-mail")">
-                                            <td>
-                                                <form asp-action="ToggleStarred" method="post" style="display:inline;">
-                                                    <input type="hidden" name="id" value="@mail.MailId" />
-                                                    <button type="submit" class="btn btn-link mdi @(mail.IsStarred ? "mdi-star" : "mdi-star-outline")"></button>
-                                                </form>
-                                            </td>
+                                        <tr>
                                             <td>@mail.Sender?.Email</td>
                                             <td>@mail.MailSubject</td>
                                             <td>@mail.MailDate.ToString("g")</td>
                                             <td>
                                                 <a href="@Url.Action("ReadMail", "Mail", new { id = mail.MailId })" class="btn btn-info btn-sm">Oku</a>
-                                                <form asp-action="Delete" method="post" style="display:inline;">
+                                                <form asp-action="PermanentlyDelete" method="post" style="display:inline;">
                                                     <input type="hidden" name="id" value="@mail.MailId" />
-                                                    <input type="hidden" name="redirectAction" value="Inbox" />
-                                                    <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm">Kalıcı Olarak Sil</button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -88,7 +53,7 @@
                                 else
                                 {
                                     <tr>
-                                        <td colspan="5" class="text-center">Gelen kutunuzda hiç mail yok.</td>
+                                        <td colspan="4" class="text-center">Silinen mailiniz yok.</td>
                                     </tr>
                                 }
                             </tbody>
@@ -119,4 +84,5 @@
 <!-- Custom js for this page -->
 <!-- End custom js for this page -->
 <script src="~/coronatheme/template/assets/js/dashboard.js"></script>
+
 <script src="~/coronatheme/template/assets/js/chart.js"></script>
