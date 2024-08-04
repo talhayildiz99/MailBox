@@ -110,12 +110,12 @@ Maillerin solunda bulunan "Yıldız" sembolüne basılarak mailler yıldızlanı
 
 Aynı zamanda SideBar'da yer alan "Diğer" kısmında "Yıldızlı Mesajlar" başlığı altında listelenir.
 
-![Yıldızlı Mesajlar](https://github.com/user-attachments/assets/f5753c4d-ec55-4378-9b26-fc1f14f967cf)
+![Screenshot_17](https://github.com/user-attachments/assets/236187d0-a3ec-427b-8a19-7fecca17c3bc)
 
 ## Çöp Kutusu
 Maillerin sağ tarafında bulunan "Sil" butonuna basılarak mailler "Çöp Kutusu"na taşınır. Silinen mailler "Kalıcı Olarak Sil" butonu ile veritabanından tamamen silinir.
 
-![Çöp](https://github.com/user-attachments/assets/5b4e31f2-9072-4f0a-8931-76ce6c463bdf)
+![Screenshot_18](https://github.com/user-attachments/assets/dd088d1e-4272-49fa-bf34-76bc6cb4bfd5)
 
 ******************************************
 
