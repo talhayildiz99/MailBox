@@ -64,7 +64,7 @@ Kayıt ve mail onayı tamamlandıktan sonra kullanıcı bilgileriyle portala gir
 
 Gönderme işlemi tamamlanan mailler "Gönderilen Mailler başlığı altında listelenir.
 
-![Gönderilenler](https://github.com/user-attachments/assets/ffc54a6a-eccf-4e01-ae58-b44d19079468)
+![Screenshot_7](https://github.com/user-attachments/assets/b9a63705-a5d8-40d5-b304-395b62889421)
 
 ******************************************
 
