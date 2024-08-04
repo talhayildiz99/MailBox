@@ -140,7 +140,8 @@ namespace MailBox.PresentationLayer.Controllers
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             var mails = _mailService.TGetSendandReceiverMailnameListAllbyReceiverId(user.Id);
-            var mailModels = _mapper.Map<List<MailListModel>>(mails);
+            var sortedMails = mails.OrderByDescending(m => m.MailDate).ToList();
+            var mailModels = _mapper.Map<List<MailListModel>>(sortedMails);
             return View(mailModels);
         }
 
