@@ -36,7 +36,7 @@ namespace MailBox.PresentationLayer.Controllers
                     Name = appUserRegisterDto.Name,
                     Surname = appUserRegisterDto.Surname,
                     Email = appUserRegisterDto.Email,
-                    City = "aaa",
+                    City = "Istanbul",
                     ImageUrl="bbb",
                     ConfirmCode = code
                 };
@@ -44,7 +44,7 @@ namespace MailBox.PresentationLayer.Controllers
                 if (result.Succeeded)
                 {
                     MimeMessage mimeMessage = new MimeMessage();
-                    MailboxAddress mailboxAddressFrom = new MailboxAddress("Mail Box Admin", "talhayldz4433@gmail.com");
+                    MailboxAddress mailboxAddressFrom = new MailboxAddress("Mail Box Admin", "geçerli bir mail yazın");
                     MailboxAddress mailboxAddressTo = new MailboxAddress("User", appUser.Email);
 
                     mimeMessage.From.Add(mailboxAddressFrom);
@@ -58,7 +58,7 @@ namespace MailBox.PresentationLayer.Controllers
 
                     SmtpClient client = new SmtpClient();
                     client.Connect("smtp.gmail.com", 587, false);
-                    client.Authenticate("talhayldz4433@gmail.com", "bimd ejdk ddgb pcqi");
+                    client.Authenticate("geçerli bir mail yazın", "mailden gelen kod");
                     client.Send(mimeMessage);
                     client.Disconnect(true);
 
