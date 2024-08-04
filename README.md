@@ -60,20 +60,20 @@ Kayıt ve mail onayı tamamlandıktan sonra kullanıcı bilgileriyle portala gir
 ## Mail Gönderme 
 "Yeni Mail Oluştur" butonuna basarak ilgili sayfaya yönderilir ve maili gönderebilirisiniz.
 
-![Screenshot_6](https://github.com/user-attachments/assets/50a74987-2e08-4780-8a5d-eb3411327b9d)
+![Mail Oluşturma](https://github.com/user-attachments/assets/baacb9cc-c199-48c7-b3d5-6f6bc7932004)
 
 Gönderme işlemi tamamlanan mailler "Gönderilen Mailler başlığı altında listelenir.
 
-![Screenshot_7](https://github.com/user-attachments/assets/349da473-0476-4284-b6d4-b1f42fe4ddcc)
+![Gönderilenler](https://github.com/user-attachments/assets/ffc54a6a-eccf-4e01-ae58-b44d19079468)
 
 ******************************************
 
 ## Taslaklar
 Mail oluşturulurken "Taslak Olarak Kaydet" butonu ile mailler taslak mail olarak kaydedilir ve "Taslaklar" başlığı altında listelenir.
 
-![Screenshot_9](https://github.com/user-attachments/assets/d65624cc-372a-481b-b69f-962ad38c00ab)
+![Taslak Maili](https://github.com/user-attachments/assets/65c571ae-be0a-4c16-9ad1-5b7a7846d9ea)
 
-![Screenshot_10](https://github.com/user-attachments/assets/74e33a33-f61f-4cf5-b389-83a5822ff70a)
+![Taslaklar](https://github.com/user-attachments/assets/10c4d9e6-a30b-4e4d-80d7-a6b886f4bf00)
 
 ******************************************
 
@@ -91,9 +91,9 @@ Eğer mail okunmamışsa Gelen Kutusu'nda ilgili mailin sol tarafında sarı bir
 
 "Oku" butonuna basıldığında mailin detayları gelir.
 
-![Screenshot_12](https://github.com/user-attachments/assets/7cf9f1f1-f30e-4645-9515-73260a5d5f73)
+![Oku](https://github.com/user-attachments/assets/4650c0b9-3d91-4968-aae1-b7726129368d)
 
-![Screenshot_14](https://github.com/user-attachments/assets/5659af4b-8aeb-427e-aa5a-1e81cd4b9466)
+![oku2](https://github.com/user-attachments/assets/713adb50-df28-409c-b9dc-f7f9bd235344)
 
 Tekrar genel kutusuna dönüldüğünde o mailin okunmamış olduğunu belirten sarı kenar çubuğu kalkacaktır.
 
@@ -106,30 +106,30 @@ Tekrar genel kutusuna dönüldüğünde o mailin okunmamış olduğunu belirten 
 ## Yıldızlı Mailler
 Maillerin solunda bulunan "Yıldız" sembolüne basılarak mailler yıldızlanır ve yıldızlanan mesajların "Yıldız" sembolü sarıya döner.
 
-![Screenshot_16](https://github.com/user-attachments/assets/676871d5-80ec-48cb-b661-29df8bbb6d23)
+![Gelen Kutusu](https://github.com/user-attachments/assets/04a88c8d-37dd-4cf3-95d8-0f6e8c654a0f)
 
 Aynı zamanda SideBar'da yer alan "Diğer" kısmında "Yıldızlı Mesajlar" başlığı altında listelenir.
 
-![Screenshot_17](https://github.com/user-attachments/assets/bdf58d51-64ee-497e-bccb-225c91262dd1)
+![Yıldızlı Mesajlar](https://github.com/user-attachments/assets/f5753c4d-ec55-4378-9b26-fc1f14f967cf)
 
 ## Çöp Kutusu
 Maillerin sağ tarafında bulunan "Sil" butonuna basılarak mailler "Çöp Kutusu"na taşınır. Silinen mailler "Kalıcı Olarak Sil" butonu ile veritabanından tamamen silinir.
 
-![Screenshot_18](https://github.com/user-attachments/assets/c204e900-4a52-4a91-9638-aba0c8bb06a2)
+![Çöp](https://github.com/user-attachments/assets/5b4e31f2-9072-4f0a-8931-76ce6c463bdf)
 
 ******************************************
 
 ## Profil Bilgilerini Görüntüleme ve Güncelleme
 "Profil" başlığı altında kullanıcıya ait bilgiler görüntülenebilir ve güncellebilir.
 
-![Screenshot_19](https://github.com/user-attachments/assets/8710bb8d-56c7-4ae4-816e-ae5f175107a0)
+![Profil](https://github.com/user-attachments/assets/9d45c816-3549-4916-a168-227e152e424d)
 
 ******************************************
 
 ## İstatistikler
 "Anasayfa" başlığı altında kullacıya ait istatistikler görüntülenir.
 
-![Screenshot_20](https://github.com/user-attachments/assets/0d0ce484-ca25-40d3-a181-61c10f634a35)
+![Dashboard](https://github.com/user-attachments/assets/08f5819b-43f6-4671-94cb-b48b5c181b18)
 
 ******************************************
 
